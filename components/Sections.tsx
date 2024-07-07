@@ -13,7 +13,7 @@ export const Section = ({ title, icon, children }: Props) => {
         {icon}
         <h2>{title}</h2>
       </span>
-      <div className="m-2 flex flex-col justify-center items-center gap-2 w-full h-full">
+      <div className="m-2 flex flex-col items-center gap-2 w-full h-full p-2">
         {children}
       </div>
     </div>
