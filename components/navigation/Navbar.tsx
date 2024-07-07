@@ -8,23 +8,47 @@ import {
   DiamondPlus,
 } from "lucide-react";
 import { ModeToggle } from "../ModeToggle";
+import { Button } from "../ui/button";
+import Link from "next/link";
 
 type Props = {};
 
 export const Navbar = ({}: Props) => {
   return (
-    <div className="w-full h-full flex justify-between items-center max-w-lg bg-zinc-900 bg-primary px-8 py-4 ">
+    <div
+      className="w-full h-full flex justify-between items-center max-w-lg bg-primary-background px-4 py-2 
+    rounded-xl border m-4 "
+    >
       <div className="flex justify-center items-center gap-4">
-        <h1 className="text-white text-2xl">Navbar</h1>
-        <House className="text-primary-foreground" />
-        <Folder className="text-primary-foreground" />
-        <Briefcase className="text-primary-foreground" />
-        <GraduationCap className="text-primary-foreground" />
-        <Mail className="text-primary-foreground" />  
+        <Link href="#home">
+          <Button variant="ghost" size="icon" className="group">
+            <House />
+          </Button>
+        </Link>
+        <Link href="#folder">
+          <Button variant="ghost" size="icon" className="group">
+            <Folder />
+          </Button>
+        </Link>
+        <Button variant="ghost" size="icon" className="group">
+          <Briefcase />
+        </Button>
+        <Button variant="ghost" size="icon" className="group">
+          <GraduationCap />
+        </Button>
+        <Button variant="ghost" size="icon" className="group">
+          <Mail />
+        </Button>
       </div>
-      <div className="flex justify-center items-center gap-4">
+      <div className="flex justify-center items-center gap-2">
         <ModeToggle />
-        <DiamondPlus className="text-primary-foreground" />
+        <Button
+          className="flex justify-center items-center gap-2"
+          variant="outline"
+        >
+          <DiamondPlus className="text-primary" />
+          <span className="font-bold">Hire Me</span>
+        </Button>
       </div>
     </div>
   );

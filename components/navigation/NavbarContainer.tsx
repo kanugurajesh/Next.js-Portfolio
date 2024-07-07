@@ -5,7 +5,7 @@ type Props = {}
 
 const NavbarContainer = (props: Props) => {
   return (
-    <div className='w-full h-full flex justify-center items-center'>
+    <div className='w-full h-full flex justify-center items-center sticky top-0'>
         <Navbar />
     </div>
   )
