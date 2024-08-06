@@ -60,7 +60,7 @@ const ItemCard = ({
           </div>
         </div>
       </div>
-      <div className="p-2 hover:bg-black hover:text-white rounded-full transition-all ease-in-out duration-300">
+      <div className="p-2 hover:bg-foreground hover:text-background rounded-full transition-all ease-in-out duration-300">
         <ChevronRight size={24} />
       </div>
     </Link>

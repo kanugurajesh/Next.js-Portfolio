@@ -7,7 +7,7 @@ import Link from "next/link";
 type Props = {
   name: string;
   role: string;
-  availability: "available" | "unavailable" | "open";
+  availability: "available" | "unavailable";
   location: string;
   email: string;
   resume: string;
@@ -25,7 +25,10 @@ const AboutMe = ({
   currentCompany,
 }: Props) => {
   return (
-    <div className="flex flex-col gap-8 max-w-lg w-full pl-5 pr-2 py-5" id="home">
+    <div
+      className="flex flex-col gap-8 max-w-lg w-full pl-5 pr-2 py-5"
+      id="home"
+    >
       <div className="flex gap-2 items-center justify-between">
         <div className="flex gap-2 items-center">
           <Globe size={32} />
@@ -33,8 +36,10 @@ const AboutMe = ({
         </div>
         <div className="cursor-pointer">
           <h1
-            className={`font-semibold text-sm px-2 py-1 rounded-full text-black flex gap-2 items-center justify-center ${
-              availability == "available" ? "bg-green-400" : "bg-red-400"
+            className={`font-semibold text-sm px-2 py-1 rounded-full text-black flex gap-2 items-center justify-center transition-all ease-in-out duration-300 ${
+              availability == "available"
+                ? "bg-green-400 border-2 border-green-400 hover:bg-white hover:text-green-400"
+                : "bg-red-400 border-2 border-red-400 hover:bg-white hover:text-red-400"
             }`}
           >
             <span
