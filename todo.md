@@ -1,12 +1,9 @@
 # TODO
 
-- [] Landing page / about me
-   - Contact Information
+- [ ] Landing page / about me
 - Projects
    -Skills
 - Experience
    -Skills
 - Education
 - Blogs --strech goal
-- Footer
-

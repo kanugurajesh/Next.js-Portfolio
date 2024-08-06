@@ -24,18 +24,18 @@ const ItemCard = ({
 }: Props) => {
   return (
     <Link
-      className="flex justify-between w-full items-center gap-2 pr-3"
+      className="flex justify-between w-full items-center gap-3 pr-3"
       href={href}
     >
       <div
-        className={`flex items-center gap-2 ${
+        className={`flex items-center gap-4 ${
           downborder && "py-4 border-b border-primary-background"
         }`}
       >
         <div className="flex flex-col justify-center items-center">
-          <Image src={image} alt={title} width={120} height={120} />
+          <Image src={image} alt={title} width={75} height={75} className="object-cover" />
         </div>
-        <div className="flex flex-col justify-center items-start gap-1">
+        <div className="flex flex-col justify-center items-start gap-2">
           <span className="flex">
             <p className="text-sm">
               <span className="text-base font-bold">{title} - </span>
