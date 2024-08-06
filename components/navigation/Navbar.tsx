@@ -25,20 +25,26 @@ export const Navbar = ({}: Props) => {
             <House />
           </Button>
         </Link>
-        <Link href="#folder">
+        <Link href="#projects">
           <Button variant="ghost" size="icon" className="group">
             <Folder />
           </Button>
         </Link>
-        <Button variant="ghost" size="icon" className="group">
-          <Briefcase />
-        </Button>
-        <Button variant="ghost" size="icon" className="group">
-          <GraduationCap />
-        </Button>
-        <Button variant="ghost" size="icon" className="group">
-          <Mail />
-        </Button>
+        <Link href="#experience">
+          <Button variant="ghost" size="icon" className="group">
+            <Briefcase />
+          </Button>
+        </Link>
+        <Link href="#education">
+          <Button variant="ghost" size="icon" className="group">
+            <GraduationCap />
+          </Button>
+        </Link>
+        <Link href={`mailto:kanugurajesh3@gmail.com`}>
+          <Button variant="ghost" size="icon" className="group">
+            <Mail />
+          </Button>
+        </Link>
       </div>
       <div className="flex justify-center items-center gap-2">
         <ModeToggle />

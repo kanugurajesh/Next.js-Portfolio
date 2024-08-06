@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Globe } from "lucide-react";
+import { Globe, Mail, File } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
@@ -25,13 +25,13 @@ const AboutMe = ({
   currentCompany,
 }: Props) => {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 max-w-lg w-full pl-5 pr-2 py-5" id="home">
       <div className="flex gap-2 items-center justify-between">
         <div className="flex gap-2 items-center">
           <Globe size={32} />
           <h1 className="font-bold">{role}</h1>
         </div>
-        <div>
+        <div className="cursor-pointer">
           <h1
             className={`font-semibold text-sm px-2 py-1 rounded-full text-black flex gap-2 items-center justify-center ${
               availability == "available" ? "bg-green-400" : "bg-red-400"
@@ -50,9 +50,9 @@ const AboutMe = ({
           </h1>
         </div>
       </div>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center gap-2">
         <div className="flex flex-col gap-1">
-          <h1 className="font-bold text-3xl">Hello I&apos;m {name}</h1>
+          <h1 className="font-bold text-2xl">Hello I&apos;m {name}</h1>
           <p className="text-sm">
             {role} based in {location}
           </p>
@@ -63,18 +63,24 @@ const AboutMe = ({
         </div>
         <Image
           src={image}
-          width={120}
-          height={120}
+          width={130}
+          height={130}
           alt={name}
           className="rounded-md"
         />
       </div>
-      <div>
+      <div className="flex gap-2 items-center">
         <Link href={`mailto:${email}`}>
-          <Button></Button>
+          <Button className="flex gap-2" variant={"outline"}>
+            <Mail />
+            <p>Email</p>
+          </Button>
         </Link>
         <Link href={`resume`}>
-          <Button></Button>
+          <Button className="flex gap-2" variant={"outline"}>
+            <File />
+            <p>Resume</p>
+          </Button>
         </Link>
       </div>
     </div>

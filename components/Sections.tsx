@@ -8,7 +8,7 @@ type Props = {
 
 export const Section = ({ title, icon, children }: Props) => {
   return (
-    <div className="w-full h-full max-w-lg flex flex-col justify-start items-start bg-secondary rounded-md">
+    <div id={title.toLowerCase()} className="w-full h-full max-w-lg flex flex-col justify-start items-start bg-secondary rounded-md">
       <span className="flex justify-center items-center gap-1 m-2 p-2 text-lg font-semibold">
         {icon}
         <h2>{title}</h2>
