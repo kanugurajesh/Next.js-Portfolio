@@ -14,13 +14,24 @@ type Props = {
   downborder?: boolean;
 };
 
-const ItemCard = ({ image, title, description, tags, href, downborder }: Props) => {
+const ItemCard = ({
+  image,
+  title,
+  description,
+  tags,
+  href,
+  downborder,
+}: Props) => {
   return (
     <Link
       className="flex justify-between w-full items-center gap-2 pr-4"
       href={href}
     >
-      <div className={`flex items-center gap-2 ${downborder && "py-4 border-b border-primary-background"}`}>
+      <div
+        className={`flex items-center gap-2 ${
+          downborder && "py-4 border-b border-primary-background"
+        }`}
+      >
         <div className="flex flex-col justify-center items-center">
           <Image src={image} alt={title} width={120} height={120} />
         </div>
@@ -46,11 +57,12 @@ const ItemCard = ({ image, title, description, tags, href, downborder }: Props) 
           </div>
         </div>
       </div>
-      <div className="p-2 hover:bg-black hover:text-white rounded-full transition-all ease-in-out duration-300">
-        <Link href={href}>
-          <ChevronRight size={24} />
-        </Link>
-      </div>
+      <Link
+        href={href}
+        className="p-2 hover:bg-black hover:text-white rounded-full transition-all ease-in-out duration-300"
+      >
+        <ChevronRight size={24} />
+      </Link>
     </Link>
   );
 };
