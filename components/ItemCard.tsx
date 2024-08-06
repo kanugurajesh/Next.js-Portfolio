@@ -19,13 +19,13 @@ const ItemCard = ({
   href,
 }: Props) => {
   return (
-    <Link className="flex justify-between w-full items-center h-full bg-red-500" href={href}>
-      <div className="flex flex-col items-center h-full">
-        <Image src={image} alt={title} width={80} height={80} className="rounded-lg w-full" />
+    <Link className="flex justify-between w-full items-center h-full gap-2" href={href}>
+      <div className="flex flex-col justify-center items-center h-full">
+        <Image src={image} alt={title} width={100} height={100}/>
       </div>
       <div className="flex flex-col justify-center items-center w-full h-full">
-        <span className="flex items-center">
-          <h3 className="text-lg font-semibold">{title}-</h3>
+        <span className="flex">
+          <h3 className="text-lg font-semibold flex flex-wrap">{title}-</h3>
           <span>{description}</span>
         </span>
         <div className="flex justify-start items-center">

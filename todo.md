@@ -1,6 +1,6 @@
 # TODO
 
-- [ ] Landing page / about me
+- [] Landing page / about me
    - Contact Information
 - Projects
    -Skills
