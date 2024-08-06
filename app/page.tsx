@@ -41,7 +41,7 @@ export default function Home() {
             <ItemCard
               image={data.image}
               title={data.title}
-              description={data.description}
+              description={`I worked at ${data.title} for ${data.duration} years`}
               tags={data.tags}
               href={data.href}
               downborder={data.downborder}
