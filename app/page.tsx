@@ -1,10 +1,27 @@
 import { Section } from "@/components/Sections";
-import { Folder, Briefcase } from "lucide-react";
+import { Folder, Briefcase, GraduationCap } from "lucide-react";
 import { ItemCard } from "@/components/ItemCard";
+import AboutMe from "@/components/headers/AboutMe";
+
+const currentCompany = {
+  name: "Google",
+  role: "Software Engineer",
+  duration: "2",
+};
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 gap-10 z-10">
+      <AboutMe
+        name="Kanugu Rajesh"
+        role="Software Engineer"
+        availability="available"
+        location="india"
+        email="contact@rajesh.com"
+        image="https://ik.imagekit.io/hbzknb1hm/rajesh.jpg?updatedAt=1722953331095"
+        resume="data"
+        currentCompany={currentCompany}
+      />
       <Section title={"Projects"} icon={<Folder />}>
         <ItemCard
           image={"/projects/nextjs.png"}
@@ -65,7 +82,7 @@ export default function Home() {
           downborder={false}
         />
       </Section>
-      <Section title="Education" icon={<Briefcase />}>
+      <Section title="Education" icon={<GraduationCap />}>
         <ItemCard
           image={"/projects/mit.png"}
           title={"MIT"}
