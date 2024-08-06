@@ -12,8 +12,6 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: "Portfolio",
   description: "Explore my portfolio",
