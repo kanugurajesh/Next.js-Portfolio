@@ -8,6 +8,8 @@ export default function Home() {
       <Section title={"Projects"} icon={<Folder />} >
         <ItemCard image={"/projects/nextjs.png"} title={"Next.js"} description={"An all in one solution for mental health issues"} tags={["Next.js", "shadcn/ui", "Tailwind", "React"]} href={"https://google.com"} downborder={true} />
         <ItemCard image={"/projects/react.webp"} title={"React"} description={"An all in one solution for mental health issues"} tags={["Next.js", "shadcn/ui", "Tailwind", "React"]} href={"https://google.com"} downborder={true} />
+        <ItemCard image={"/projects/solidjs.svg"} title={"solidjs"} description={"An all in one solution for mental health issues"} tags={["Next.js", "shadcn/ui", "Tailwind", "React"]} href={"https://google.com"} downborder={true} />
+        <ItemCard image={"/projects/sveltekit.png"} title={"sveltekit"} description={"An all in one solution for mental health issues"} tags={["Next.js", "shadcn/ui", "Tailwind", "React"]} href={"https://google.com"} downborder={false} />
       </Section>
     </main>
   );

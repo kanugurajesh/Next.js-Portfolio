@@ -29,7 +29,7 @@ const ItemCard = ({
     >
       <div
         className={`flex items-center gap-4 ${
-          downborder && "py-4 border-b border-primary-background"
+          downborder ? "py-4 border-b border-primary-background" : "py-4"
         }`}
       >
         <div className="flex flex-col justify-center items-center">
