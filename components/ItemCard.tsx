@@ -33,7 +33,14 @@ const ItemCard = ({
         }`}
       >
         <div className="flex flex-col justify-center items-center">
-          <Image src={image} alt={title} width={75} height={75} className="object-cover" />
+          <Image
+            src={image}
+            alt={title}
+            width={70}
+            height={70}
+            style={{ maxWidth: "70px", maxHeight: "70px" }}
+            className="object-contain"
+          />
         </div>
         <div className="flex flex-col justify-center items-start gap-2">
           <span className="flex">
@@ -45,11 +52,7 @@ const ItemCard = ({
           <div className="flex justify-start items-center">
             <span className="flex justify-center items-center gap-1">
               {tags.map((tag, index) => (
-                <Badge
-                  key={tag + index}
-                  className="text-xs font-bold bg-primary-background text-primary"
-                  variant="outline"
-                >
+                <Badge key={tag + index} variant="default">
                   {tag}
                 </Badge>
               ))}

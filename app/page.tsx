@@ -41,10 +41,26 @@ export default function Home() {
       </Section>
       <Section title="Experience" icon={<Briefcase />}>
         <ItemCard
-          image={"/projects/sveltekit.png"}
-          title={"sveltekit"}
-          description={"An all in one solution for mental health issues"}
-          tags={["Next.js", "shadcn/ui", "Tailwind", "React"]}
+          image={"/projects/google.webp"}
+          title={"Google"}
+          description={"I worked at google for 2 years"}
+          tags={["Angular", "Spring Boot", "javascript", "java", "gcp"]}
+          href={"https://google.com"}
+          downborder={false}
+        />
+        <ItemCard
+          image={"/projects/amazon.png"}
+          title={"Amazon"}
+          description={"I worked at amazon for 2 years"}
+          tags={["React", "Spring Boot", "javascript", "java", "aws"]}
+          href={"https://google.com"}
+          downborder={false}
+        />
+        <ItemCard
+          image={"/projects/mercari.svg"}
+          title={"Mercari"}
+          description={"I worked at mercari for 1 year"}
+          tags={["React", "Go", "javascript", "aws"]}
           href={"https://google.com"}
           downborder={false}
         />
