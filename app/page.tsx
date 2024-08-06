@@ -46,7 +46,7 @@ export default function Home() {
           description={"I worked at google for 2 years"}
           tags={["Angular", "Spring Boot", "javascript", "java", "gcp"]}
           href={"https://google.com"}
-          downborder={false}
+          downborder={true}
         />
         <ItemCard
           image={"/projects/amazon.png"}
@@ -54,13 +54,23 @@ export default function Home() {
           description={"I worked at amazon for 2 years"}
           tags={["React", "Spring Boot", "javascript", "java", "aws"]}
           href={"https://google.com"}
-          downborder={false}
+          downborder={true}
         />
         <ItemCard
           image={"/projects/mercari.svg"}
           title={"Mercari"}
           description={"I worked at mercari for 1 year"}
           tags={["React", "Go", "javascript", "aws"]}
+          href={"https://google.com"}
+          downborder={false}
+        />
+      </Section>
+      <Section title="Education" icon={<Briefcase />}>
+        <ItemCard
+          image={"/projects/mit.png"}
+          title={"MIT"}
+          description={"Bachelor's in Computer Science"}
+          tags={["Minor in Mathematics", "Minor in Physics", "4yoe"]}
           href={"https://google.com"}
           downborder={false}
         />
