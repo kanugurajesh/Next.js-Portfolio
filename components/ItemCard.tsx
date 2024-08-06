@@ -24,7 +24,7 @@ const ItemCard = ({
 }: Props) => {
   return (
     <Link
-      className="flex justify-between w-full items-center gap-2 pr-4"
+      className="flex justify-between w-full items-center gap-2 pr-3"
       href={href}
     >
       <div
@@ -37,10 +37,10 @@ const ItemCard = ({
         </div>
         <div className="flex flex-col justify-center items-start gap-1">
           <span className="flex">
-            <h3>
-              <span className="text-lg font-bold">{title}- </span>
+            <p className="text-sm">
+              <span className="text-base font-bold">{title} - </span>
               {description}
-            </h3>
+            </p>
           </span>
           <div className="flex justify-start items-center">
             <span className="flex justify-center items-center gap-1">
@@ -57,12 +57,9 @@ const ItemCard = ({
           </div>
         </div>
       </div>
-      <Link
-        href={href}
-        className="p-2 hover:bg-black hover:text-white rounded-full transition-all ease-in-out duration-300"
-      >
+      <div className="p-2 hover:bg-black hover:text-white rounded-full transition-all ease-in-out duration-300">
         <ChevronRight size={24} />
-      </Link>
+      </div>
     </Link>
   );
 };
