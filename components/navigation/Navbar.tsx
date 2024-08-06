@@ -17,7 +17,7 @@ export const Navbar = ({}: Props) => {
   return (
     <div
       className="w-full h-full flex justify-between items-center max-w-lg bg-primary-background px-4 py-2 
-    rounded-xl border m-4"
+    rounded-xl border m-4 bg-white shadow-lg"
     >
       <div className="flex justify-center items-center gap-4">
         <Link href="#home">
