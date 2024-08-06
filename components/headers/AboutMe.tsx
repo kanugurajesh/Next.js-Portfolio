@@ -7,7 +7,8 @@ import Link from "next/link";
 type Props = {
   name: string;
   role: string;
-  availability: "available" | "unavailable";
+  // availability: "available" | "unavailable";
+  availability: string;
   location: string;
   email: string;
   resume: string;

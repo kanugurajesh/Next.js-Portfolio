@@ -2,10 +2,11 @@ import { Section } from "@/components/Sections";
 import { Folder, Briefcase, GraduationCap } from "lucide-react";
 import { ItemCard } from "@/components/ItemCard";
 import AboutMe from "@/components/headers/AboutMe";
+import { data } from "@/lib/data";
 
 const currentCompany = {
-  name: "Google",
-  role: "Software Engineer",
+  name: data.experiences[0].title,
+  role: data.role,
   duration: "2",
 };
 
@@ -14,84 +15,50 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24 z-10">
       <div className="flex gap-10 flex-col bg-primary-foreground bg-opacity-50 rounded-xl p-3">
         <AboutMe
-          name="Kanugu Rajesh"
-          role="Software Engineer"
-          availability="available"
-          location="india"
-          email="contact@rajesh.com"
-          image="https://ik.imagekit.io/hbzknb1hm/rajesh.jpg?updatedAt=1722953331095"
-          resume="data"
+          name={data.name}
+          role={data.role}
+          availability={data.availability}
+          location={data.location}
+          email={data.email}
+          image={data.image}
+          resume={data.resume}
           currentCompany={currentCompany}
         />
         <Section title={"Projects"} icon={<Folder />}>
-          <ItemCard
-            image={"/projects/nextjs.png"}
-            title={"Next.js"}
-            description={"An all in one solution for mental health issues"}
-            tags={["Next.js", "shadcn/ui", "Tailwind", "React"]}
-            href={"https://google.com"}
-            downborder={true}
-          />
-          <ItemCard
-            image={"/projects/react.webp"}
-            title={"React"}
-            description={"An all in one solution for mental health issues"}
-            tags={["Next.js", "shadcn/ui", "Tailwind", "React"]}
-            href={"https://google.com"}
-            downborder={true}
-          />
-          <ItemCard
-            image={"/projects/solidjs.svg"}
-            title={"solidjs"}
-            description={"An all in one solution for mental health issues"}
-            tags={["Next.js", "shadcn/ui", "Tailwind", "React"]}
-            href={"https://google.com"}
-            downborder={true}
-          />
-          <ItemCard
-            image={"/projects/sveltekit.png"}
-            title={"sveltekit"}
-            description={"An all in one solution for mental health issues"}
-            tags={["Next.js", "shadcn/ui", "Tailwind", "React"]}
-            href={"https://google.com"}
-            downborder={false}
-          />
+          {data.projects.map((data) => (
+            <ItemCard
+              image={data.image}
+              title={data.title}
+              description={data.description}
+              tags={data.tags}
+              href={data.href}
+              downborder={data.downborder}
+            />
+          ))}
         </Section>
         <Section title="Experience" icon={<Briefcase />}>
-          <ItemCard
-            image={"/projects/google.webp"}
-            title={"Google"}
-            description={"I worked at google for 2 years"}
-            tags={["Angular", "Spring Boot", "javascript", "java", "gcp"]}
-            href={"https://google.com"}
-            downborder={true}
-          />
-          <ItemCard
-            image={"/projects/amazon.png"}
-            title={"Amazon"}
-            description={"I worked at amazon for 2 years"}
-            tags={["React", "Spring Boot", "javascript", "java", "aws"]}
-            href={"https://google.com"}
-            downborder={true}
-          />
-          <ItemCard
-            image={"/projects/mercari.svg"}
-            title={"Mercari"}
-            description={"I worked at mercari for 1 year"}
-            tags={["React", "Go", "javascript", "aws"]}
-            href={"https://google.com"}
-            downborder={false}
-          />
+          {data.experiences.map((data) => (
+            <ItemCard
+              image={data.image}
+              title={data.title}
+              description={data.description}
+              tags={data.tags}
+              href={data.href}
+              downborder={data.downborder}
+            />
+          ))}
         </Section>
         <Section title="Education" icon={<GraduationCap />}>
-          <ItemCard
-            image={"/projects/mit.png"}
-            title={"MIT"}
-            description={"Bachelor's in Computer Science"}
-            tags={["Minor in Mathematics", "Minor in Physics", "4yoe"]}
-            href={"https://google.com"}
-            downborder={false}
-          />
+          {data.education.map((data) => (
+            <ItemCard
+              image={data.image}
+              title={data.title}
+              description={data.description}
+              tags={data.tags}
+              href={data.href}
+              downborder={data.downborder}
+            />
+          ))}
         </Section>
       </div>
     </main>
